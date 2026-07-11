@@ -1,0 +1,4 @@
+baseURL = "https://go-erasure.github.io/"
+languageCode = "en-us"
+title = "go-erasure"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]

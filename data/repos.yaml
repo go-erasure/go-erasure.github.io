@@ -1,0 +1,3 @@
+items:
+  - { name: "reedsolomon", kind: "codec", desc: "Reed-Solomon MDS erasure code over GF(2<sup>16</sup>) (PAR2-compatible field, primitive <code>0x1100B</code>). SPLIT(16,4) SIMD on amd64/arm64." }
+  - { name: "mojette", kind: "codec", desc: "Mojette transform erasure code — XOR-only discrete Radon projections, as used by RozoFS. go-asmgen XOR kernels on all six 64-bit SIMD targets." }
