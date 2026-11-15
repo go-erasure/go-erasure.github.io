@@ -41,12 +41,10 @@
   <div class="hero"><div class="wrap">
     <div>
       <h1 class="head">go-erasure</h1>
-      <p class="sub">Pure-Go <strong>erasure coding</strong> — Reed-Solomon over GF(2<sup>16</sup>) and the RozoFS <strong>Mojette transform</strong>, with go-asmgen SIMD.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://go-erasure.github.io/docs/">{{ partial "icons/book.html" . }}Documentation</a>
-        <a class="btn btn-ghost" href="https://github.com/go-erasure">{{ partial "icons/github.html" . }}GitHub</a>
-      </div>
-      <div class="trust">{{ if not (partial "mantra-on.html" $) }}<span class="pill">CGO_ENABLED=0</span>{{ end }}<span class="pill">Reed-Solomon GF(2¹⁶)</span><span class="pill">Mojette transform (RozoFS)</span><span class="pill">go-asmgen SIMD</span><span class="pill">real-hardware validated</span>{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}</div>
+      <p class="sub">{{ if partial "mantra-on.html" . }}Go{{ else }}Pure-Go{{ end }} <strong>erasure coding</strong> — Reed-Solomon over GF(2<sup>16</sup>) and the RozoFS <strong>Mojette transform</strong>, with go-asmgen SIMD.</p>
+      {{/* [[params.cta]] in hugo.toml: the kit renders the row */}}
+      {{ partial "cta.html" . }}
+      <div class="trust">{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">CGO_ENABLED=0</span>{{ end }}{{ end }}<span class="pill">Reed-Solomon GF(2¹⁶)</span><span class="pill">Mojette transform (RozoFS)</span><span class="pill">go-asmgen SIMD</span><span class="pill">real-hardware validated</span>{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}{{ end }}</div>
     </div>
     {{ partial "hero-carousel.html" . }}
   </div></div>
