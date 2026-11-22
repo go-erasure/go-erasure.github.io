@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ .Site.Title }} — pure-Go erasure coding</title>
-<meta name="description" content="Pure-Go, dependency-free erasure coding: a Reed-Solomon MDS codec over GF(2^16) (PAR2-compatible field) and the XOR-only Mojette discrete-Radon transform used by RozoFS, both with go-asmgen SIMD kernels validated on real POWER8, IBM z15, RISC-V and Apple silicon. CGO_ENABLED=0.">
+<meta name="description" content="Pure-Go, dependency-free erasure coding: a Reed-Solomon MDS codec over GF(2^16) with the real PAR 2.0 code (byte-identical to par2cmdline) and the XOR-only Mojette discrete-Radon transform used by RozoFS, both with go-asmgen SIMD kernels validated on real POWER8, IBM z15, RISC-V and Apple silicon. CGO_ENABLED=0.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 {{ partial "styles.html" . }}
 {{/* The template's own rules for what <main> holds, kept for it alone (class legacy),
@@ -55,7 +55,7 @@
   </div></div>{{ end }}
 
   <main id="repos" class="legacy"><div class="wrap">
-    <p class="lead"><code>go-erasure</code> is two families of erasure code in dependency-free Go: a <strong>Reed-Solomon</strong> MDS codec over GF(2<sup>16</sup>) (the PAR2-compatible field) and the XOR-only <strong>Mojette</strong> discrete-Radon transform used by <a href="https://rozofs.github.io/rozofs/master/">RozoFS</a>. The region hot loops dispatch to <a href="https://github.com/go-asmgen/asmgen">go-asmgen</a> SIMD kernels, each checked byte-for-byte against the scalar oracle and validated on real POWER8, IBM z15, RISC-V and Apple silicon.</p>
+    <p class="lead"><code>go-erasure</code> is two families of erasure code in dependency-free Go: a <strong>Reed-Solomon</strong> MDS codec over GF(2<sup>16</sup>) (with the real PAR 2.0 code, byte-identical to par2cmdline) and the XOR-only <strong>Mojette</strong> discrete-Radon transform used by <a href="https://rozofs.github.io/rozofs/master/">RozoFS</a>. The region hot loops dispatch to <a href="https://github.com/go-asmgen/asmgen">go-asmgen</a> SIMD kernels, each checked byte-for-byte against the scalar oracle and validated on real POWER8, IBM z15, RISC-V and Apple silicon.</p>
 
     <div class="contract">
       <h2>Reed-Solomon in a few lines</h2>
